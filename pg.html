@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="imagen/png" sizes="128x128" href="img/mercedes_logos_PNG31.png">
+    <title>Fábrica de Produtos FG-MOTORS</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        table{
+         background-color: rgb(0, 0, 0);
+         color: white;
+        }
+        table, th, td {
+        border: 1px solid #000000;
+        }
+        
+/* Estilos para a seção de produtos */
+h1, h2 {
+    font-size: 36px;
+    text-align: center;
+    margin: 2px 0;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+#table1 {
+    margin-top: 10%;
+
+}
+
+td{
+    width: 110px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    width: 10%;
+}
+
+table img {
+    width: 200px;
+    height: 150px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(2, 2, 2, 0.2);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+table img:hover {
+    transform: scale(1.05);
+}
+
+table p {
+    font-weight: bold;
+    margin-top: 10px;
+}
+    </style>
+</head>
+<body background="img/1321760.jpeg">
+    <header>
+        <h1>FG-MOTORS</h1>
+        <nav>
+            <ul>
+                <li><a href="fornecedores.html">Fornecedores</a></li>
+                <li><a href="custos.html">Custos de Produção</a></li>
+                <li><a href="materia_prima.html">Valores da Matéria-prima</a></li>
+                <li><a href="fretes.html">Valores de Fretes</a></li>
+                <li><a href="clientes.html">Clientes</a></li>
+                <li><a href="linha.html">linha de produção</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h2>Modelos que fazem parte da nossa Matéria Prima</h2>
+    <div class="slideshow-container">
+        <div class="mySlides1">
+            <img src="img/mercedes_sl.webp" class="img">
+            <p id="car">Mercedes SL</p>
+        </div>
+        <div class="mySlides1">
+            <img src="img/mansory_mercedes-benz.webp" class="img">
+            <p id="car">Mercedes Mansory</p>
+        </div>
+        <div class="mySlides1">
+            <img src="img/G500.webp" class="img">
+            <p id="car">Mercedes G500</p>
+        </div>
+        <div class="mySlides1">
+            <img src="img/gle.webp" class="img">
+            <p id="car">Mercedes GLE</p>
+        </div>
+        <div class="mySlides1">
+            <img src="img/g-class.webp" class="img">
+            <p id="car">Mercedes G-CLASS</p>
+        </div>
+        <div class="mySlides1">
+            <img src="img/seila.webp" class="img">
+            <p id="car">Mercedes AMG-GT S</p>
+        </div>
+        
+        <div class="mySlides1">
+            <img src="img/cls.webp" class="img">
+            <p id="car">Mercedes CLS</p>
+        </div>
+        
+        <div class="mySlides1">
+            <img src="img/gt-63.webp" class="img">
+            <p id="car">Mercedes GT-63</p>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+    </div>
+        <footer>
+            <div class="footer-contact">
+                <h2>Entre em Contato</h2>
+                <p>Endereço: Rua da Independente 95 | Telefone: (11) 98772-7921 | Email: fgmotors@gmail.com</p>
+            </div>
+        </footer>
+        <script>
+            var slideIndex = [1,1];
+var slideId = ["mySlides1"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+var i;
+var x = document.getElementsByClassName(slideId[no]);
+if (n > x.length) {slideIndex[no] = 1}    
+if (n < 1) {slideIndex[no] = x.length}
+for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+}
+x[slideIndex[no]-1].style.display = "block";  
+}
+        </script>
+</body>
+
+</html>
